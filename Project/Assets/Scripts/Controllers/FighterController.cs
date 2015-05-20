@@ -5,15 +5,17 @@ using System.Collections;
 
 public class FighterController : MonoBehaviour
 {
-	Transform transform;
-	Rigidbody rigidBody;
-	Collider collider;
+	protected Transform transform;
+	protected Rigidbody rigidBody;
+	protected Collider collider;
 	
 	public float Speed = 6f;
-	public float TurnSpeed = 6f;
+	public float LookXSpeed = 6f;
+	public float LookYSpeed = 20f;
 	public float JumpStrength = 8f;
 	public float JumpFudge = 0.1f;
 	public float Gravity = 4f;
+	public Transform YAiming;
 
 	// Use this for initialization
 	void Awake ()
@@ -23,11 +25,6 @@ public class FighterController : MonoBehaviour
 		collider = GetComponent<Collider>();
 	}
 	
-	// Update is called once per frame
-	void FixedUpdate ()
-	{
-	}
-
 	public void Movement(Vector2 movement, Vector2 turning)
 	{
 		Vector3 velocity = new Vector3();
@@ -39,8 +36,11 @@ public class FighterController : MonoBehaviour
 		rigidBody.velocity = velocity;
 		
 		rigidBody.angularVelocity = new Vector3(0f,
-		                                        turning.x * TurnSpeed,
+		                                        turning.x * LookXSpeed,
 		                                        0f);
+		YAiming.Rotate(turning.y * LookYSpeed * Time.fixedDeltaTime,
+		               0f,
+		               0f);
 	}
 
 	public void Jump()

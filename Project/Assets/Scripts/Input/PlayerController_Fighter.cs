@@ -29,7 +29,34 @@ public class PlayerController_Fighter : MonoBehaviour
 		movementController = GetComponent<FighterController>();
 		magicController = GetComponent<MagicController>();
 	}
-	
+
+	void Update()
+	{
+		
+		if(Controller.GetButtonDown(Cast))
+		{
+			magicController.CastSpell();
+		}
+		else if(Controller.GetButtonUp(Cast))
+		{
+			magicController.EndSpell();
+		}
+		
+		if(Controller.GetButtonDown(Jump))
+		{
+			movementController.Jump();
+		}
+		
+		if(Controller.GetButtonDown(PrevSpell))
+		{
+			magicController.SelectCurrentSpellIndex(magicController.GetCurrentSpellIndex() - 1);
+		}
+		if(Controller.GetButtonDown(NextSpell))
+		{
+			magicController.SelectCurrentSpellIndex(magicController.GetCurrentSpellIndex() + 1);
+		}
+	}
+
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
@@ -45,29 +72,6 @@ public class PlayerController_Fighter : MonoBehaviour
 		turning.x += Input.GetAxis(Controller.RightStickXAxis);
 		turning.y += Input.GetAxis(Controller.RightStickYAxis);
 
-		if(Controller.GetButtonDown(Cast))
-		{
-			magicController.CastSpell();
-		}
-		else if(Controller.GetButtonUp(Cast))
-		{
-			magicController.EndSpell();
-		}
-
-		if(Controller.GetButtonDown(Jump))
-		{
-			movementController.Jump();
-		}
-
-		if(Controller.GetButtonDown(PrevSpell))
-		{
-			magicController.SelectCurrentSpellIndex(magicController.GetCurrentSpellIndex() - 1);
-		}
-		if(Controller.GetButtonDown(NextSpell))
-		{
-			magicController.SelectCurrentSpellIndex(magicController.GetCurrentSpellIndex() + 1);
-		}
-		
 		movementController.Movement(movement, turning);
 	}
 }

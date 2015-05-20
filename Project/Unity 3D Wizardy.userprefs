@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\Trigger_OnShifted.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Controllers\Switch.cs" Line="11" Column="32" />
+      <File FileName="Assets\Scripts\Gameplay\Switch_Timed.cs" Line="22" Column="24" />
+      <File FileName="Assets\Scripts\Gameplay\Switch_ShiftIntoPosition.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Trigger_OnSwitches.cs" Line="73" Column="2" />
+      <File FileName="Assets\Scripts\Gameplay\Trigger_OnTouch.cs" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\Controllers\Trigger.cs" Line="40" Column="17" />
+      <File FileName="Assets\Scripts\FX\Deco_ShiftIntoPosition.cs" Line="29" Column="19" />
+      <File FileName="Assets\Scripts\Gameplay\Trigger_OnShifted.cs" Line="28" Column="28" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{97DE9571-67A5-32DD-4F80-B1300F6CFB1B}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_LINUX;UNITY_STANDALONE;UNITY_STANDALONE_LINUX_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_EGL;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Done\Done_Scripts\Done_BGScroller.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByBoundary.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByContact.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByTime.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_EvasiveManeuver.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_GameController.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_Mover.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_PlayerController.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_RandomRotator.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_WeaponController.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_EnemyFighter.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_FireConstantly.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_Freighter.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_HangarBay.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_SFBContention.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_TakeOff.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_Targeting.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_Transport.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_Turret.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_WarpSequence.cs" />
+     <Compile Include="Assets\Scripts\Cameras and Lighting\Camera_LookAtTarget.cs" />
+     <Compile Include="Assets\Scripts\Cameras and Lighting\TakeCameraFocus.cs" />
+     <Compile Include="Assets\Scripts\Controllers\Collectible.cs" />
+     <Compile Include="Assets\Scripts\Controllers\CollisionDamage.cs" />
+     <Compile Include="Assets\Scripts\Controllers\FighterController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\Health.cs" />
+     <Compile Include="Assets\Scripts\Controllers\MagicController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\MagicSpell.cs" />
+     <Compile Include="Assets\Scripts\Controllers\ObjectEvents.cs" />
+     <Compile Include="Assets\Scripts\Controllers\SpaceShipController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\Switch.cs" />
+     <Compile Include="Assets\Scripts\Controllers\Trigger.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplayAmmo.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplayButton.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplayCooldown.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplayHealth.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplayMP.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplayMPBar.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplayScore.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplaySpell.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplayTarget.cs" />
+     <Compile Include="Assets\Scripts\Display\DisplayWarnings.cs" />
+     <Compile Include="Assets\Scripts\Display\UI_GameOver.cs" />
+     <Compile Include="Assets\Scripts\Display\UI_Success.cs" />
+     <Compile Include="Assets\Scripts\FX\DeathFX.cs" />
+     <Compile Include="Assets\Scripts\FX\Deco_AngleWhenManeuverable.cs" />
+     <Compile Include="Assets\Scripts\FX\Deco_Bob.cs" />
+     <Compile Include="Assets\Scripts\FX\Deco_ColorOnSwitch.cs" />
+     <Compile Include="Assets\Scripts\FX\Deco_EnableOnFadeOut.cs" />
+     <Compile Include="Assets\Scripts\FX\Deco_FadeOnCollision.cs" />
+     <Compile Include="Assets\Scripts\FX\Deco_ShiftIntoPosition.cs" />
+     <Compile Include="Assets\Scripts\FX\Deco_VisibleWhenCastable.cs" />
+     <Compile Include="Assets\Scripts\FX\SFX_PlayOnce.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\AwardPoints.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Collectible_UnlockSpell.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\DestroyOnCollision.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\MagicSpell_BasicShot.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Magic_Fetch.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\MenuSelection_Exit.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\MenuSelection_LookAround.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\OnDeathKnockback.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\ProxyHitbox.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\ShotBehavior.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Switch_ShiftIntoPosition.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Switch_Timed.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\TakesCrashDamage.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Trigger_LifeForce.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Trigger_OnDamage.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Trigger_OnShifted.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Trigger_OnSwitches.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Trigger_OnTouch.cs" />
+     <Compile Include="Assets\Scripts\Input\Controller.cs" />
+     <Compile Include="Assets\Scripts\Input\Menu.cs" />
+     <Compile Include="Assets\Scripts\Input\MenuSelection.cs" />
+     <Compile Include="Assets\Scripts\Input\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Input\PlayerController_Fighter.cs" />
+     <Compile Include="Assets\Scripts\Input\PlayerProfile.cs" />
+     <Compile Include="Assets\Scripts\Levels\SpawnEnemies.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\HardpointHandler.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\LevelController.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\Level_HomeAmbush.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\Level_StationStrike.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\Message_OnDeath.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\SpaceShipThrottleFX.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\Tag_Enemy.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\Tag_Hazard.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\Tag_Objective.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\Tag_Player.cs" />
+     <Compile Include="Assets\Scripts\Space Shooter Specific\WeaponHardpoint.cs" />
+     <Compile Include="Assets\Scripts\Utility\CompositeCollision.cs" />
+     <Compile Include="Assets\Scripts\Utility\ConstantSpin.cs" />
+     <Compile Include="Assets\Scripts\Utility\ConstantVelocity.cs" />
+     <Compile Include="Assets\Scripts\Utility\DestroyWhenDistant.cs" />
+     <Compile Include="Assets\Scripts\Utility\Disable_OnGameOver.cs" />
+     <Compile Include="Assets\Scripts\Utility\Editor_ProxyParent.cs" />
+     <Compile Include="Assets\Scripts\Utility\ExpandingCollider.cs" />
+     <Compile Include="Assets\Scripts\Utility\GameBoundaries.cs" />
+     <Compile Include="Assets\Scripts\Utility\GameMath.cs" />
+     <Compile Include="Assets\Scripts\Utility\Lifetime.cs" />
+     <Compile Include="Assets\Scripts\Utility\LockRotation.cs" />
+     <Compile Include="Assets\Scripts\Utility\LockToObjectPos.cs" />
+     <Compile Include="Assets\Scripts\Utility\LockToObjectRot.cs" />
+     <Compile Include="Assets\Scripts\Utility\RandomScale.cs" />
+     <Compile Include="Assets\Scripts\Utility\RandomSpin.cs" />
+     <Compile Include="Assets\Scripts\Utility\Region_Force.cs" />
+     <Compile Include="Assets\Scripts\Utility\Region_LocalSpace.cs" />
+     <Compile Include="Assets\Scripts\Utility\Region_TargetEntered.cs" />
+     <Compile Include="Assets\Scripts\Utility\Region_Torque.cs" />
+     <Compile Include="Assets\Scripts\Utility\ScaleParticles.cs" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

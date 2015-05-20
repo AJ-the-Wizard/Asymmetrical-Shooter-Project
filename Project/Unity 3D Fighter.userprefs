@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\MenuSelection_LookAround.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Input\Menu.cs" Line="46" Column="1" />
+      <File FileName="Assets\Scripts\Input\MenuSelection.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\MenuSelection_LookAround.cs" Line="35" Column="27" />
+      <File FileName="Assets\Scripts\Gameplay\MenuSelection_Exit.cs" Line="4" Column="48" />
+      <File FileName="Assets\Scripts\FX\Deco_EnableOnFadeOut.cs" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\FX\Deco_FadeOnCollision.cs" Line="42" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

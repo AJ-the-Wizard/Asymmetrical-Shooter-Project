@@ -1,0 +1,8 @@
+#.gitignore file
+Project/.DS_Store
+Probject/Library/*
+Project/Temp
+
+*.csproj
+*.pidb
+*.sln 

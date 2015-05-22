@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+[RequireComponent (typeof(ObjectEvents))]
 
 public class MagicController : MonoBehaviour
 {
+	protected ObjectEvents objectEvents;
+
 	public int MaxMP;
 	public int CurMP;
 	public float MPRegen;
@@ -18,6 +21,8 @@ public class MagicController : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
 	{
+		objectEvents = GetComponent<ObjectEvents>();
+
 		CurMP = MaxMP;
 	}
 
@@ -72,7 +77,7 @@ public class MagicController : MonoBehaviour
 
 		if(spell.MPCost <= CurMP)
 		{
-			int cost = spell.CastSpell(CastingLocation, this.gameObject);
+			int cost = spell.CastSpell(CastingLocation, objectEvents.Owner);
 			CurMP -= cost;
 		}
 	}
@@ -81,7 +86,7 @@ public class MagicController : MonoBehaviour
 	{
 		if(Spells[CurrentSpellIndex].Continuous)
 		{
-			Spells[CurrentSpellIndex].EndSpell(CastingLocation, this.gameObject);
+			Spells[CurrentSpellIndex].EndSpell(CastingLocation, objectEvents.Owner);
 		}
 	}
 

@@ -12,6 +12,8 @@ public class FighterController : MonoBehaviour
 	public float Speed = 6f;
 	public float LookXSpeed = 6f;
 	public float LookYSpeed = 20f;
+	public float MinYAngle = -80f;
+	public float MaxYAngle = 80f;
 	public float JumpStrength = 8f;
 	public float JumpFudge = 0.1f;
 	public float Gravity = 4f;
@@ -38,9 +40,27 @@ public class FighterController : MonoBehaviour
 		rigidBody.angularVelocity = new Vector3(0f,
 		                                        turning.x * LookXSpeed,
 		                                        0f);
-		YAiming.Rotate(turning.y * LookYSpeed * Time.fixedDeltaTime,
-		               0f,
-		               0f);
+
+		Vector3 localRotation = YAiming.localRotation.eulerAngles;
+		localRotation.x = GameMath.AsPlusMinusDegrees(localRotation.x);
+		float check = turning.y * LookYSpeed * Time.fixedDeltaTime;
+
+		if(check > 0f)
+		{
+			if((localRotation.x + check) < MaxYAngle)
+			{
+				localRotation.x += check;
+				YAiming.localRotation = Quaternion.Euler(localRotation);
+			}
+		}
+		else
+		{
+			if((localRotation.x + check) > MinYAngle)
+			{
+				localRotation.x += check;
+				YAiming.localRotation = Quaternion.Euler(localRotation);
+			}
+		}
 	}
 
 	public void Jump()

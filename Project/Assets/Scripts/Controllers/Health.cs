@@ -16,10 +16,6 @@ public class Health : MonoBehaviour
 
 	public GameObject OnHitFX;
 
-	public bool TakesCrashDamage = false;
-	public float MinCrashSpeed = 6f;
-	public int CrashDamage = 1;
-
 	public bool Invincible = false;
 
 	// Use this for initialization

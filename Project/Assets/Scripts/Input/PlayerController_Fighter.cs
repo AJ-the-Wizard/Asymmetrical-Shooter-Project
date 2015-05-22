@@ -6,7 +6,6 @@ using System.Collections;
 public class PlayerController_Fighter : MonoBehaviour
 {
 	protected FighterController movementController;
-	protected MagicController magicController;
 
 	public Controller.Xbox360Button MoveForward = Controller.Xbox360Button.LeftStickUpAxis;
 	public Controller.Xbox360Button MoveLeft = Controller.Xbox360Button.LeftStickLeftAxis;
@@ -19,41 +18,19 @@ public class PlayerController_Fighter : MonoBehaviour
 	public Controller.Xbox360Button LookDown = Controller.Xbox360Button.RightStickUpAxis;
 
 	public Controller.Xbox360Button Jump = Controller.Xbox360Button.LeftTriggerAxis;
-	public Controller.Xbox360Button Cast = Controller.Xbox360Button.RightTriggerAxis;
-	public Controller.Xbox360Button PrevSpell = Controller.Xbox360Button.LeftBumper;
-	public Controller.Xbox360Button NextSpell = Controller.Xbox360Button.RightBumper;
 
 	// Use this for initialization
 	void Start ()
 	{
 		movementController = GetComponent<FighterController>();
-		magicController = GetComponent<MagicController>();
 	}
 
 	void Update()
 	{
 		
-		if(Controller.GetButtonDown(Cast))
-		{
-			magicController.CastSpell();
-		}
-		else if(Controller.GetButtonUp(Cast))
-		{
-			magicController.EndSpell();
-		}
-		
 		if(Controller.GetButtonDown(Jump))
 		{
 			movementController.Jump();
-		}
-		
-		if(Controller.GetButtonDown(PrevSpell))
-		{
-			magicController.SelectCurrentSpellIndex(magicController.GetCurrentSpellIndex() - 1);
-		}
-		if(Controller.GetButtonDown(NextSpell))
-		{
-			magicController.SelectCurrentSpellIndex(magicController.GetCurrentSpellIndex() + 1);
 		}
 	}
 
